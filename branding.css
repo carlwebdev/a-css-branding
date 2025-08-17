@@ -1,0 +1,304 @@
+/* 
+ *
+ *
+ * a css branding
+ *
+ *
+ */
+ 
+
+/* CSS CUSTOM PROPERTIES */
+:root {
+	--c-branding-bg: #212121;
+	--c-branding-text: white;
+	--c-branding-accent: #f06;
+}
+
+
+body {
+	background-color: var(--c-branding-bg);
+	color: var(--c-branding-text);
+	padding: 4em; 
+}
+
+
+/* test*/
+article {
+	border:2px solid var(--c-branding-accent);
+
+	margin-bottom: 2em; 
+	padding: 1em; 
+}
+
+p {
+	line-height: 1.6em;
+	margin-bottom: 1em;
+	max-width: 100ch;
+}
+
+
+q, 
+cite, 
+abbr,
+s,
+/* kbd, */
+code {color: var(--c-branding-accent);}
+
+
+kbd {
+	background-color: var(--c-branding-accent);
+	padding: 0.4em;
+	border-radius:0.4em; 
+}
+
+button {
+	background-color: var(--c-branding-accent);
+	padding: 0.4em;
+	border-radius:0.4em; 
+
+	color: inherit;
+	font-weight: bold;
+
+}
+
+
+
+::selection {
+	background-color: var(--c-branding-accent);
+	
+  }
+
+
+/* Links */
+a, a:hover, a:visited {
+	color: var(--c-branding-accent);
+}
+
+/* marker (lists & details/summary icon */
+::marker {
+	color: var(--c-branding-accent);
+}
+
+
+/* Input caret */
+  /* 
+   * 2 - CARET (input)  
+   */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color */
+  /* caret-color: $c_accent; */
+  input, textarea {
+	caret-color: var(--c-branding-accent); /* does it apply only to the line ????? */
+  }
+
+
+
+
+
+marquee {
+	background-color: var(--c-branding-accent);
+}
+
+
+/*
+blockquote, q {quotes:none;}	
+*/
+
+blockquote {
+	/*
+	margin-left: 1.5em;
+	padding-left: 1em;
+	*/
+	border-left: 4px solid var(--c-branding-accent); /* Simple blockquote styling */
+  }
+
+
+
+
+  hr {
+	/*
+	border: 0;
+	height: 1px;
+	*/
+	height: 3px;
+	background: var(--c-branding-accent);
+	/*
+	margin: 1em 0;
+	*/
+  }
+  
+  
+
+img,
+picture,
+video,
+/* audio, */
+iframe,
+canvas {
+  border: 4px solid var(--c-branding-accent);
+}
+
+
+
+details {
+	border: 2px solid var(--c-branding-accent);
+}
+
+
+summary + * {
+	/* border: 2px solid var(--c-branding-accent); */
+}
+
+
+/* 
+ *
+ * FORMS (RESET) 
+ *
+ */
+	
+
+ fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0; /*ADD HERE SOME COLOR !!! */ 
+  }
+  
+  legend {
+	font-size: inherit;
+	padding: 0;
+  }
+  
+  
+
+
+input[type=text], 
+input[type=submit],
+input[type=reset],
+input[type=button], 
+input[type=image], 
+textarea,
+select {
+	-webkit-appearance: none; /* iOS Safari default override */
+	border-radius:0px;
+} 
+	
+
+/* Focus Styles for Forms */
+input, textarea {
+	outline: none; /* Only if you add custom focus styles elsewhere */
+}
+
+input:focus,
+textarea:focus,
+button:focus,
+select:focus {
+  outline: 2px solid #007bff; /* Custom focus outline */
+  outline-offset: 2px; /* Adds space between element and outline */
+}
+
+
+
+
+
+	
+/* option {cursor:pointer;} */ /* NOT WORKING !!! */
+label,
+input[type="submit"],
+input[type="reset"],
+button,
+select {
+  cursor:pointer; 
+}
+
+
+/* Form Field Size */
+/* input, */
+input[type=text], 
+input[type=password], 
+select, 
+textarea {
+	width:100%; 
+}		
+	
+
+button {
+
+}
+
+
+
+/* OBS . POPOUPOEN YA ESTABA FENDIND E EL THM SKEELTON, PEOR NO DEBERI AHAVER NADA DEFINIDO AHI !!! ORQU EE SUN SKELEOTON SIN NADA */
+button.popover {position:relative;}
+
+:popover-open {
+    /* */
+	width: 150px;
+    height: 150px;
+	border-radius:0.4em;
+	
+    /* position: absolute; */ 
+    /* */
+	inset: unset;
+    bottom: 0px;
+    left: 10px;
+    margin: 0;
+	
+    /*
+	color: maroon;
+    background-color: orange;
+	*/
+    /*
+	font-size: 25px;
+	*/
+
+
+	background-color: var(--c-branding-accent);
+	color: inherit;/**/
+}
+
+
+
+/* 
+ *
+ * FORM ELEMENTS - TEXTAREA
+ *
+ */
+textarea {
+	/* resize:none; */
+	resize:vertical;
+	display: block; /* to avoid default margin bottom due to display: inline(-block) */
+
+	/* HACER LO DEL AUTO HEIGHT !!! */
+}	
+	
+
+
+
+
+/* 
+ *
+ * GENRAL BRANIDNG ...   SCROLBAR, MAKERS, INPUET CARET... 
+ *
+ */
+::-webkit-scrollbar {
+	width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	/* background-color: #ccc; */
+	background: var(--c-branding-accent);
+	border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+	/* background: #f0f0f0; */
+	background: var(--c-branding-bg);
+  }
+
+
+
+/* Headings */	
+h1, h2, h3, h4, h5, h6 {
+	/* font-size: 100%; */
+	font-weight: bold;
+	margin-bottom: 1em; 
+}  
